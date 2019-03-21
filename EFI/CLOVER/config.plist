@@ -27,48 +27,6 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change HECI to IMEI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					R0ZYMA==
-					</data>
-					<key>Replace</key>
-					<data>
-					SUdQVQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PEGP to GFX0</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					UEVHUA==
-					</data>
-					<key>Replace</key>
-					<data>
-					R0ZYMA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change EHC1 to EH01</string>
 					<key>Disabled</key>
 					<false/>
@@ -115,15 +73,6 @@
 			<key>SlpSmiAtWake</key>
 			<false/>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>UIAC-ALL</string>
-			</dict>
-		</array>
 		<key>SSDT</key>
 		<dict>
 			<key>Generate</key>
@@ -135,30 +84,30 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>PluginType</key>
+			<string>1</string>
 		</dict>
-		<key>SortedOrder</key>
-		<array>
-			<string>SSDT-UIAC-ALL.aml</string>
-		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
+		<key>Arguments</key>
+		<string>igfxcflbklt=force</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
+		<string>Mac OS</string>
 		<key>HibernationFixup</key>
 		<false/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NoEarlyProgress</key>
-		<false/>
+		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>StrictHibernate</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>XMPDetection</key>
 		<false/>
 	</dict>
@@ -185,6 +134,11 @@
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>IntelGFX</key>
+			<string>0x3E928086</string>
+		</dict>
 		<key>LANInjection</key>
 		<false/>
 		<key>Properties</key>
@@ -200,26 +154,48 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AwCSPg==
+				AwCRPg==
 				</data>
 				<key>device-id</key>
 				<data>
-				kj4AAA==
+				kT4AAA==
+				</data>
+				<key>enable-cfl-backlight-fix</key>
+				<data>
+				AQAAAA==
 				</data>
 				<key>enable-hdmi20</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
 				</data>
 			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>FixOwnership</key>
-			<true/>
+			<false/>
 			<key>HighCurrent</key>
-			<true/>
+			<false/>
+			<key>Inject</key>
+			<false/>
 		</dict>
 		<key>UseIntelHDMI</key>
 		<false/>
@@ -228,8 +204,8 @@
 	<dict>
 		<key>Hide</key>
 		<array>
+			<string>\EFI\BOOT\BOOTX64.EFI</string>
 			<string>Preboot</string>
-			<string>Install</string>
 			<string>Recovery</string>
 		</array>
 		<key>Language</key>
@@ -271,7 +247,7 @@
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<false/>
+			<true/>
 			<key>Intel</key>
 			<true/>
 		</dict>
@@ -279,6 +255,8 @@
 		<false/>
 		<key>RadeonDeInit</key>
 		<false/>
+		<key>ig-platform-id</key>
+		<string>0x3E910003</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -305,15 +283,39 @@
 		<string>0x67</string>
 		<key>ROM</key>
 		<data>
-		TmeSKRJO
+		cKDWQ0oy
 		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>09/28/2018</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>iMac-Aluminum</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
+		<key>Family</key>
+		<string>iMac</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<false/>
 		<key>ProductName</key>
-		<string>iMac18,2</string>
+		<string>iMac18,3</string>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
