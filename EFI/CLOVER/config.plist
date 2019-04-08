@@ -263,7 +263,7 @@
 		<key>AppleIntelCPUPM</key>
 		<true/>
 		<key>AppleRTC</key>
-		<true/>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>KernelCpu</key>
