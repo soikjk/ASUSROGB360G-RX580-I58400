@@ -138,97 +138,15 @@
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>IntelGFX</key>
+			<string>0x3E928086</string>
+		</dict>
 		<key>LANInjection</key>
 		<false/>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0)/Pci(0x02,0)</key>
-			<dict>
-				<key># DVMT-prealloc</key>
-				<string>32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
-				<key># Note1</key>
-				<string> no HDMI example in CoffeeLake, flags 86090000 seen in CannonLake?</string>
-				<key>#2 0204-&gt;0306</key>
-				<string>0x3e9b0000, 0306 instead of 0204, HDMI</string>
-				<key>#2 framebuffer-con2-alldata</key>
-				<data>
-				AwYIAAAEAADHAwAA
-				</data>
-				<key>#2 framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>#3 framebuffer-con1-alldata</key>
-				<data>
-				/wAAAAEAAAAgAAAA/wAAAAABAAAAIAAA
-				</data>
-				<key>#3 framebuffer-con1-enable</key>
-				<integer>1</integer>
-				<key>#3 no external</key>
-				<string>0x3e9b0000, eliminate all external ports (0105 and 0204)</string>
-				<key>#framebuffer-con0-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con0-type</key>
-				<data>
-				AAQAAA==
-				</data>
-				<key>#framebuffer-con1-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con1-flags</key>
-				<data>
-				hwEAAA==
-				</data>
-				<key>#framebuffer-con1-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>#framebuffer-con1-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>#framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con2-flags</key>
-				<data>
-				hwEAAA==
-				</data>
-				<key>#framebuffer-con2-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>#framebuffer-con2-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>#framebuffer-con3-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con3-flags</key>
-				<data>
-				hwEAAA==
-				</data>
-				<key>#framebuffer-con3-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>#framebuffer-con3-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>#hda-gfx</key>
-				<string>onboard-1</string>
-				<key>AAPL,ig-platform-id</key>
-				<data>
-				AACbPg==
-				</data>
-				<key>framebuffer-fbmem</key>
-				<data>
-				AACQAA==
-				</data>
-				<key>framebuffer-patch-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-stolenmem</key>
-				<data>
-				AAAwAQ==
-				</data>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>layout-id</key>
@@ -236,17 +154,52 @@
 				BQAAAA==
 				</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AwCRPg==
+				</data>
+				<key>device-id</key>
+				<data>
+				kT4AAA==
+				</data>
+				<key>enable-cfl-backlight-fix</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>enable-hdmi20</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
+				</data>
+			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>FixOwnership</key>
-			<true/>
+			<false/>
 			<key>HighCurrent</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>UseIntelHDMI</key>
 		<false/>
@@ -298,9 +251,9 @@
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<false/>
+			<true/>
 			<key>Intel</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>PatchVBios</key>
 		<false/>
@@ -336,9 +289,9 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>Mobile</key>
-		<true/>
+		<false/>
 		<key>ProductName</key>
-		<string>MacBookPro15,2</string>
+		<string>iMac18,3</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
