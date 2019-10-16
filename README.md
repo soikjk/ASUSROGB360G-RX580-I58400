@@ -9,4 +9,4 @@ CPU i5-8400
 
 SMBIOS自己生成一下
 
-![info-1](https://github.com/soikjk/ASUSROGB360G-RX580-I58400/blob/master/images/mac1015.jpg.jpg)
+![info-1](https://github.com/soikjk/ASUSROGB360G-RX580-I58400/blob/master/images/mac1015.jpg)
