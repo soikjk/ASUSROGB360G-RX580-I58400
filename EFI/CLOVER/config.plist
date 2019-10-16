@@ -17,7 +17,7 @@
 				<key>FixHDA</key>
 				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>FixShutdown</key>
 				<false/>
 				<key>FixTMR</key>
@@ -25,8 +25,6 @@
 				<key>FixUSB</key>
 				<false/>
 			</dict>
-			<key>Name</key>
-			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -71,6 +69,20 @@
 					WEhDXw==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					U0FUMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					U0FUQQ==
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -91,11 +103,15 @@
 			<key>PluginType</key>
 			<string>1</string>
 		</dict>
+		<key>SortedOrder</key>
+		<array>
+			<string>SSDT-APMC.aml</string>
+			<string>SSDT-EC.aml</string>
+			<string>SSDT-UIAC.aml</string>
+		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Arguments</key>
-		<string>igfxcflbklt=force</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -111,9 +127,9 @@
 		<key>StrictHibernate</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>2</integer>
+		<integer>3</integer>
 		<key>XMPDetection</key>
-		<false/>
+		<string>Yes</string>
 	</dict>
 	<key>BootGraphics</key>
 	<dict>
@@ -199,7 +215,7 @@
 			<key>HighCurrent</key>
 			<false/>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>UseIntelHDMI</key>
 		<false/>
@@ -219,7 +235,7 @@
 			<key>DoubleClick</key>
 			<integer>500</integer>
 			<key>Enabled</key>
-			<false/>
+			<true/>
 			<key>Mirror</key>
 			<false/>
 			<key>Speed</key>
@@ -265,19 +281,17 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleIntelCPUPM</key>
-		<true/>
-		<key>AppleRTC</key>
 		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>KernelCpu</key>
-		<true/>
+		<false/>
 		<key>KernelLapic</key>
 		<false/>
 		<key>KernelPm</key>
-		<true/>
+		<false/>
 		<key>KernelXCPM</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
@@ -285,6 +299,10 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>ROM</key>
+		<data>
+		cKDWQ0oy
+		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
