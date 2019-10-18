@@ -10,7 +10,7 @@ BIOS设置
 
 BIOS版本 ROG-STRIX-B360-G-GAMING-ASUS-1703.CAP  
 
-可以自行配置  也可以用BIOSS设置文件夹里的配置文件直接进行恢复
+可以自行配置  也可以用BIOS设置文件夹里的配置文件直接进行恢复
 
 主板设置➡Advanced➡Advanced PCH Configuration➡system time and alarm source➡Legacy RTC；
 
